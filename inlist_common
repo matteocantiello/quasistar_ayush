@@ -1,0 +1,61 @@
+&star_job
+
+/ ! end of star_job namelist
+
+
+&eos
+
+/ ! end of eos namelist
+
+
+&kap
+    Zbase = 0.0
+/ ! end of kap namelist
+
+
+&controls
+    initial_mass = 1d5
+    
+    initial_y = 0.3
+    initial_z = 0
+    mass_change = 0d0
+    
+    max_allowed_nz = 20000
+    mesh_delta_coeff = 0.5
+    time_delta_coeff = 1
+    min_timestep_limit = 1d-18
+
+    write_profiles_flag = .true.
+    history_interval = 1
+    photo_interval = 500
+    profile_interval = 500
+    max_num_profile_models = 10000
+    
+    !x_logical_ctrl(1) = .false.  ! accrete onto black hole (false by default)
+    x_logical_ctrl(2) = .true.  ! enable star mass loss from the conversion of rest energy to radiation
+    x_logical_ctrl(3) = .false.  ! enable timestep slowing
+    x_logical_ctrl(4) = .false.  ! make approximations to get a fast simulation
+    x_ctrl(1) = 0.1             ! radiative efficiency 
+    x_ctrl(2) = 0.1             ! convective efficiency 
+    x_ctrl(3) = 1               ! BH mass growth timestep factor
+    x_ctrl(4) = 0.1             ! fudge factor / efficiency factor for eruptive mass loss other_wind model
+
+    MLT_option = 'ML1'
+
+    use_Ledoux_criterion  = .true.
+    calculate_Brunt_N2 = .true.
+    
+    steps_before_use_gold_tolerances = 100
+
+    write_pulse_data_with_profile = .true.
+    pulse_data_format = 'GYRE'
+    add_atmosphere_to_pulse_data = .true.
+    add_center_point_to_pulse_data = .false.
+    keep_surface_point_for_pulse_data = .true.
+    add_double_points_to_pulse_data = .true.
+
+/ ! end of controls namelist
+
+&pgstar       
+       
+/ ! end of pgstar namelist

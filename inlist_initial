@@ -1,0 +1,29 @@
+
+&star_job
+      create_pre_main_sequence_model = .true.
+      
+      save_model_when_terminate = .true.
+      save_model_filename = 'start.mod'
+
+  ! display on-screen plots
+    !pgstar_flag = .true.
+
+/ ! end of star_job namelist
+
+&kap
+
+/ !end of kap namelist
+
+&controls
+
+      ! limit max_model_number as part of test_suite
+      max_model_number = 1
+      history_interval = -1
+
+      x_logical_ctrl(1) = .false.  ! accrete onto black hole 
+
+/ ! end of controls namelist
+
+&pgstar       
+       
+/ ! end of pgstar namelist
