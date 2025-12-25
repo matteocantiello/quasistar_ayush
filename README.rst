@@ -5,7 +5,7 @@ This repository contains the MESA (Modules for Experiments in Stellar Astrophysi
 These models are based on the physics described in **Hassan et al. (2025)**.
 
 ## 🔭 Physics Context
-A Quasi-Star is a hypothetical object from the early Universe ($z \approx 10-20$) formed when a massive gas cloud collapses directly into a black hole seed (or captures one). This results in a supermassive black hole seed ($\sim 100\,M_\odot$) embedded within a massive ($10^4 - 10^6\,M_\odot$) radiation-pressure supported envelope.
+A Quasi-Star is a hypothetical object from the early Universe ($z ~ 10-20$) formed when a massive gas cloud collapses directly into a black hole seed (or captures one). This results in a supermassive black hole seed ($~ 100\,M_\odot$) embedded within a massive ($10^4 - 10^6\,M_\odot$) radiation-pressure supported envelope.
 
 Unlike normal stars, the luminosity is generated not by nuclear fusion, but by the accretion of the envelope material onto the central black hole.
 
