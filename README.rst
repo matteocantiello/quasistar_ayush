@@ -5,7 +5,7 @@ This repository contains the MESA (Modules for Experiments in Stellar Astrophysi
 These models are based on the physics described in **Hassan et al. (2025)**.
 
 ## 🔭 Physics Context
-A Quasi-Star is a hypothetical object from the early Universe ($z \sim 10-20$) formed when a massive gas cloud collapses directly into a black hole seed (or captures one), resulting in a supermassive black hole seed ($\sim 100\,M_\odot$) embedded within a massive ($\sim 10^4 - 10^6\,M_\odot$) radiation-pressure supported envelope.
+A Quasi-Star is a hypothetical object from the early Universe ($z \approx 10-20$) formed when a massive gas cloud collapses directly into a black hole seed (or captures one). This results in a supermassive black hole seed ($\sim 100\,M_\odot$) embedded within a massive ($10^4 - 10^6\,M_\odot$) radiation-pressure supported envelope.
 
 Unlike normal stars, the luminosity is generated not by nuclear fusion, but by the accretion of the envelope material onto the central black hole.
 
@@ -20,7 +20,7 @@ Unlike normal stars, the luminosity is generated not by nuclear fusion, but by t
 
 ### MESA Version
 This code requires **MESA Revision 24.08.1**.
-Running with older or significantly newer versions may cause convergence issues due to changes in equation of state (EOS) or opacity tables.
+Running with older or significantly newer versions may cause convergence issues due to changes in the equation of state (EOS) or opacity tables.
 
 * Official MESA website: [https://mesastar.org/](https://mesastar.org/)
 * Installation Guide: [MESA SDK & Installation](https://docs.mesastar.org/en/latest/installation.html)
@@ -42,12 +42,3 @@ To evolve the Quasi-Star model, use the following command. Note that we use a sp
 
 ```bash
 ./rn_nomodfiles inlist_evolve_header
-
-### Mass loss Controls
-
-"inlist_extra" - change mass and/or metallicity here
-"inlist_project" - main inlist
-	- change x_ctrl(18) under controls for efficiency factor for eruptive mass loss
-	- Ensure use_other_wind = .true. when using eruptive mass loss model
-	- Ensure both use_superad_reduction = .false. and okay_to_reduce_gradT_excess = .false. when using eruptive mass loss model
-"src/run_star_extras_dejager.f90" - run_stars_extras without decin low-T mass loss change
