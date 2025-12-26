@@ -69,7 +69,9 @@
       
       ! these routines are called by the standard run_star check_model
       contains
-      
+
+      include "other_cgrav.inc"
+   
       subroutine extras_controls(id, ierr)
          integer, intent(in) :: id
          integer, intent(out) :: ierr
@@ -102,7 +104,8 @@
          s% data_for_extra_profile_header_items => data_for_extra_profile_header_items
 
          s% other_wind => erupt_other_wind
-         
+          s% other_cgrav => my_other_cgrav
+       
       end subroutine extras_controls
 
       ! Calculate spatially smoothed sound speed for numerical stability
