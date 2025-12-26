@@ -31,7 +31,7 @@
     profile_interval = 500
     max_num_profile_models = 10000
     
-    !x_logical_ctrl(1) = .false.  ! accrete onto black hole (false by default)
+    ! x_logical_ctrl(1) = .true.  ! accrete onto black hole (false by default)
     x_logical_ctrl(2) = .true.  ! enable star mass loss from the conversion of rest energy to radiation
     x_logical_ctrl(3) = .false.  ! enable timestep slowing
     x_logical_ctrl(4) = .false.  ! make approximations to get a fast simulation
@@ -47,12 +47,12 @@
     
     steps_before_use_gold_tolerances = 100
 
-    write_pulse_data_with_profile = .true.
-    pulse_data_format = 'GYRE'
-    add_atmosphere_to_pulse_data = .true.
-    add_center_point_to_pulse_data = .false.
-    keep_surface_point_for_pulse_data = .true.
-    add_double_points_to_pulse_data = .true.
+   ! write_pulse_data_with_profile = .true.
+   ! pulse_data_format = 'GYRE'
+   ! add_atmosphere_to_pulse_data = .true.
+   ! add_center_point_to_pulse_data = .false.
+   ! keep_surface_point_for_pulse_data = .true.
+   ! add_double_points_to_pulse_data = .true.
 
 / ! end of controls namelist
 

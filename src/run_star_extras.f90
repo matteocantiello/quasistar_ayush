@@ -1616,10 +1616,10 @@
          end if
          
          ! terminate if the BH mass exceeds x_ctrl(4)
-         if (s% x_ctrl(4) > 0 .and. s% xtra(1) / Msun > s% x_ctrl(4)) then
-            extras_check_model = terminate
-            termination_code_str(t_xtra1) = 'black hole'
-         end if
+         !if (s% x_ctrl(4) > 0 .and. s% xtra(1) / Msun > s% x_ctrl(4)) then
+         !   extras_check_model = terminate
+         !   termination_code_str(t_xtra1) = 'black hole'
+         ! end if
          
          ! terminate if the BH mass exceeds the stellar mass 
          if (s% xtra(1) + s% xtra(10) >= s% mstar) then
