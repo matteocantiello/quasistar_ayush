@@ -34,6 +34,10 @@
     ! Enable or disable wind
     ! use_other_wind = .true.
     
+    ! Include TOV Correction 
+
+    use_other_cgrav = .true.
+    
     x_logical_ctrl(1) = .true.  ! accrete onto black hole 
     x_logical_ctrl(3) = .true.  ! enable timestep slowing
     max_timestep = 8d8
